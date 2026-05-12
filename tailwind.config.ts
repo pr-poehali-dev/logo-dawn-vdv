@@ -18,8 +18,17 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			oswald: ['Oswald', 'sans-serif'],
+			roboto: ['Roboto', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				'vdv-dark': '#0a1428',
+				'vdv-navy': '#0d1f45',
+				'vdv-blue': '#4a90d9',
+				'vdv-sky': '#7bb8f0',
+				'vdv-gold': '#c9a227',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -70,6 +79,14 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'spin': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' },
+				},
+				'bounce': {
+					'0%, 100%': { transform: 'translateY(-10%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+					'50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
